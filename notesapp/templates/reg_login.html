@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, 
+                         initial-scale=1.0">
+    <title>Notes App</title>
+    <link href="{{ url_for('static', path='/static.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
+        <div class="form-section">
+            <form class="login-box" method="post" action="/login">
+                <input type="email" 
+                       class="email ele" name="email"
+                       placeholder="youremail@email.com">
+                <input type="password" name="password"
+                       class="password ele" 
+                       placeholder="password">
+                <button class="clkbtn">Login</button>
+            </form>
+            <!-- <div class="signup-box"> -->
+            <form class="signup-box" method="post" action="/signup">
+                <input type="text" 
+                       class="name ele" name="username"
+                       placeholder="Enter your name">
+                <input type="email" name="email"
+                       class="email ele" 
+                       placeholder="youremail@email.com">
+                <input type="password" name="password"
+                       class="password ele" 
+                       placeholder="password">
+                <input type="password" name="hash_password"
+                       class="password ele" 
+                       placeholder="Confirm password">
+                <button class="clkbtn">Signup</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', path='/static.js') }}"></script>
+</body>
+</html>
